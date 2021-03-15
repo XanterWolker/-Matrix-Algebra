@@ -23,6 +23,26 @@ namespace УП_Matrix_Algebra
         public MainWindow()
         {
             InitializeComponent();
+
+
+           
+        }
+
+
+
+        private void Tb_Field_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Tb_Field2_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Button_Auth_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

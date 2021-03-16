@@ -185,7 +185,7 @@
                 </Style>
             </TextBlock.Style>
         </TextBlock>
-        
+
         <TextBox x:Name="tb_Field2" Style="{StaticResource TB}" Margin="579,172,21,0" VerticalAlignment="Top" TextChanged="Tb_Field2_TextChanged"   />
         <TextBlock IsHitTestVisible="False" FontSize="14" Text="Поле ввода" Margin="588,180,0,0" VerticalAlignment="Top" Foreground="Gray">
             <TextBlock.Style>
@@ -201,7 +201,7 @@
         </TextBlock>
 
         <Button
-                  Content="Ввести размерность"  FontSize="16"  Foreground="White" Click="Button_Auth_Click" Margin="602,224,39,157">
+                  Content="Ввести размерность"  FontSize="16"  Foreground="White" Click="Button_Enter_Click" Margin="602,224,39,157">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="OverridesDefaultStyle" Value="True"/>
@@ -262,6 +262,169 @@
             </Button.Style>
 
         </Button>
-        
+        <Button
+                  Content="Умножить"  FontSize="16"  Foreground="White" Click="Button_Mult_Click" Margin="421,240,220,141">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="OverridesDefaultStyle" Value="True"/>
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black" Offset="0"/>
+                                <GradientStop Color="Black" Offset="1"/>
+                                <GradientStop Color="#FF60A41B" Offset="0.519"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border x:Name="border" BorderThickness="0" BorderBrush="Black" CornerRadius="12"
+                                Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                    <GradientStop Color="#FF3C1919" Offset="0"/>
+                                                    <GradientStop Color="#FF5A1919" Offset="1"/>
+                                                    <GradientStop Color="#FF9D3232" Offset="0.5"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Trigger>
+                                    <EventTrigger RoutedEvent="PreviewMouseDown">
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <ThicknessAnimation Storyboard.TargetProperty="Margin"
+                                                            Duration="0:0:0.100" To="2,2,0,0"/>
+
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+
+                                    <EventTrigger RoutedEvent="PreviewMouseUp">
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <ThicknessAnimation Storyboard.TargetProperty="Margin"
+                                                            Duration="0:0:0.100" To="0"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+
+                </Style>
+            </Button.Style>
+
+        </Button>
+        <Button
+                  Content="Вычесть"  FontSize="16"  Foreground="White" Click="Button_Subtract_Click" Margin="421,278,220,103">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="OverridesDefaultStyle" Value="True"/>
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black" Offset="0"/>
+                                <GradientStop Color="Black" Offset="1"/>
+                                <GradientStop Color="#FF60A41B" Offset="0.519"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Button">
+                                <Border x:Name="border" BorderThickness="0" BorderBrush="Black" CornerRadius="12"
+                                Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                                    <GradientStop Color="#FF3C1919" Offset="0"/>
+                                                    <GradientStop Color="#FF5A1919" Offset="1"/>
+                                                    <GradientStop Color="#FF9D3232" Offset="0.5"/>
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Trigger>
+                                    <EventTrigger RoutedEvent="PreviewMouseDown">
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <ThicknessAnimation Storyboard.TargetProperty="Margin"
+                                                            Duration="0:0:0.100" To="2,2,0,0"/>
+
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+
+                                    <EventTrigger RoutedEvent="PreviewMouseUp">
+                                        <BeginStoryboard>
+                                            <Storyboard>
+                                                <ThicknessAnimation Storyboard.TargetProperty="Margin"
+                                                            Duration="0:0:0.100" To="0"/>
+                                            </Storyboard>
+                                        </BeginStoryboard>
+                                    </EventTrigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+
+                </Style>
+            </Button.Style>
+
+        </Button>
+
+        <StackPanel/>
+
+        <StackPanel/>
+
+        <Grid DataContext="{Binding RelativeSource={RelativeSource AncestorType=Window}}">
+            <TextBlock x:Name="Matrix2"  Foreground="White" HorizontalAlignment="Left" Margin="358,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="95" Width="157" TextAlignment="Center">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF14B02A" Offset="0"/>
+                        <GradientStop Color="#FF133217" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock x:Name="Matrix_Result"  Foreground="White" HorizontalAlignment="Left" Margin="252,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="95" Width="157" TextAlignment="Center">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF14B02A" Offset="0"/>
+                        <GradientStop Color="#FF133217" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+        </Grid>
+        <TextBlock x:Name="Matrix"  Foreground="White" HorizontalAlignment="Left" Margin="153,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="95" Width="157" TextAlignment="Center">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF14B02A" Offset="0"/>
+                    <GradientStop Color="#FF133217" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+
     </Grid>
+
+
 </Window>

@@ -1,17 +1,14 @@
-﻿using System;
+﻿using System.ComponentModel;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Collections.ObjectModel;
+
+
 
 namespace УП_Matrix_Algebra
 {
@@ -23,10 +20,51 @@ namespace УП_Matrix_Algebra
         public MainWindow()
         {
             InitializeComponent();
+            int n1 = 6;
+            int m1 = 8;
+            int[,] arr1 = new int[n1, m1];
+            
+            
+
+            Random r1 = new Random();
+            for (int i = 0; i < n1; i++)
+            {
+                for (int j = 0; j < m1; j++)
+                {
+                    arr1[i, j] = r1.Next(0, 2);
+
+                   Matrix.Text += Convert.ToString(arr1[i, j] + " ");
+                }
+                Matrix.Text += "\n";
+            }
+
+            int n2 = 6;
+            int m2 = 8;
+            int[,] arr2 = new int[n2, m2];
 
 
-           
+            
+            
+            for (int i = 0; i < n2; i++)
+            {
+                for (int j = 0; j < m2; j++)
+                {
+                    arr2[i, j] = r1.Next(0, 2);
+
+                    Matrix2.Text += Convert.ToString(arr2[i, j] + " ");
+                }
+                Matrix2.Text += "\n";
+            }
+
+
         }
+
+
+
+
+
+
+
 
 
 
@@ -40,7 +78,22 @@ namespace УП_Matrix_Algebra
 
         }
 
-        private void Button_Auth_Click(object sender, RoutedEventArgs e)
+        private void Button_Enter_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Mult_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Subtract_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
 
         }
